@@ -1,0 +1,13 @@
+.frineds-container{
+    width: 80%;
+    margin: 20px auto;
+    background-color: aliceblue;
+    
+}
+
+.friend{
+    width: auto;
+    margin: 20px;
+    padding: 10px 15px;
+    
+}

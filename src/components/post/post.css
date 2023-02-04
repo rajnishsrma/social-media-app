@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.post-container{
+    width: 100%;
+    background-color: aliceblue;
+    padding: 10px 15px;
+    margin: 50px auto;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.userdiv{
+    display: flex;
+    align-items: center;
+    
+}
+
+.userdiv h4{
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.userdiv img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-txt-img{
+    border: 1px solid red;
+    margin-top: 20px;
+    padding: 10px 15px;
+    text-align: start;
+}
+
+.post-img{
+    width: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}

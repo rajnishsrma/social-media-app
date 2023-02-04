@@ -1,0 +1,12 @@
+.createpost-container{
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: aqua;
+}
+
+textarea{
+    width: 60%;
+    height: 200px;
+
+}

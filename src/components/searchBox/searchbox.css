@@ -1,0 +1,35 @@
+.s-box-container{
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px 15px;
+    position: relative;
+    
+}
+
+.s-box-container input{
+    width: 100%;
+    padding: 8px 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+
+}
+
+.search-results{
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    padding: 5px 15px;
+   
+    border: 1px solid grey;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+.search-results a {
+    text-decoration: none;
+    color: black;
+}
+.search-container{
+    /* visibility: hidden; */
+    border: 2px solid grey;
+    border-radius: 10px;
+}
