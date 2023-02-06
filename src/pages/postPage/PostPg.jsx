@@ -1,12 +1,14 @@
 import React from 'react'
 import Post from '../../components/post/Post'
-
+import './postpage.css'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import CreatePost from '../../components/createPost/CreatePost';
 import { useState } from 'react';
 import axios from 'axios';
+import PostSidebar from '../../components/postSidebar/PostSidebar';
+import NavigationBar from '../../components/nevigationBar/NavigationBar';
 
 export default function PostPg() {
 
@@ -40,11 +42,15 @@ export default function PostPg() {
   }, [])
 
   return (
-    <div>
+    <div className='post-wrapper'>
+      <PostSidebar />
+      <div>
       <CreatePost token={user.token}/>
       {
         posts.map((p) => <Post post={p} />)
       }
       </div>
+      < NavigationBar />
+    </div>
   )
 }

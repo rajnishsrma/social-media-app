@@ -13,10 +13,27 @@ export default function UserProfile() {
         return data ;
       });
 
+
       const [user, setUser] = useState();
+      const [connectedFriends, setConnectedFriends] = useState([])
+
+      
+      const findConnectedFriends = () => {
+        let connectedFrndz =  reduxState.all_users.filter((u) => {
+            for(let phone of reduxState.user.friends){
+               if(phone == u.phone){
+                   return true ;
+               }
+            }
+            return false ;
+        });
+        console.log(connectedFrndz)
+        setConnectedFriends(connectedFrndz)
+     }
 
       useEffect(()=>{
-        setUser(reduxState.user)
+        setUser(reduxState.user);
+        findConnectedFriends();
       },[])
 
   return (
@@ -36,30 +53,21 @@ export default function UserProfile() {
         <div className="connection-wrapper">
 
             <div className="myconnection-heading">My Connections</div>
+{
+  connectedFriends.map(cf => (
+    
+    <div className="connections">
+    <img src="https://images.unsplash.com/photo-1526547541286-73a7aaa08f2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" alt="" />
 
-            <div className="connections">
-                <img src="https://images.unsplash.com/photo-1526547541286-73a7aaa08f2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" alt="" />
+<a ><h4>{cf.name}</h4></a>
+<h4> 4 mutual connection</h4>
+<a href='/'>< FaUserPlus /></a>
+    
 
-            <a ><h4>user name</h4></a>
-            <h4> 4 mutual connection</h4>
-            <a href='/'>< FaUserPlus /></a>
-                
-
-            </div>
-            <div className="connections">
-                <img src="https://images.unsplash.com/photo-1526547541286-73a7aaa08f2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" alt="" />
-
-                <a><h4>user name</h4></a>
-                <a href='/'>< FaUserPlus /></a>
-
-            </div>
-            <div className="connections">
-                <img src="https://images.unsplash.com/photo-1526547541286-73a7aaa08f2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" alt="" />
-
-                <a><h4>user name</h4></a>
-                <a href='/'>< FaUserPlus /></a>
-
-            </div>
+</div>
+  ))
+}
+           
         </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { FaUserFriends } from 'react-icons/fa';
 import './searchbox.css';
 
 
@@ -34,13 +35,16 @@ export default function SearchBox(props) {
               { search.length > 0 && (
                   search.map((item)=>{
                     return <div key={item.id} className="search-results"  >
-                      <a href='/userprofile'> {item.name} </a>
+                              <a href='/userprofile'> {item.name} </a>
+                              <div className="addfriend"><FaUserFriends /></div>
                       </div>  
                   })
                   )
                 
               }
           </div>
+
+          
         
     </div>
   )

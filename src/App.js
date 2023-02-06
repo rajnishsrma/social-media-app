@@ -11,13 +11,15 @@ import FriendsPg from './pages/friendspage/FriendsPg';
 
 function App() {
   return (
-    <div>
+    <div  >
+       
     <BrowserRouter>
+    
       <TopMenu />
       <Routes>
         <Route path='/login' element={< LoginPg/>} />
         <Route path='/signup' element={< SignUpPg/>} />
-        <Route path='/postpg' element={<PostPg />} />
+        <Route path='/postpg' element={<PostPg />} />    
         <Route path='/userprofile' element={<UserProfilePg />} />
         <Route path='/friends' element={<FriendsPg />} />
       </Routes>

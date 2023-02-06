@@ -1,0 +1,33 @@
+.navigation{
+    margin: 10px 0px;
+    padding: 10px 15px;
+width: 20%;
+height: 100%;
+box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+.navigation input{
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.navigation button{
+    width: 100px;
+    margin-top: 10px;
+}
+
+
+.notification{
+    margin: 10px 0px;
+    padding: 10px 15px;
+background-color: lightblue;
+}
+.notification img{
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 60%;
+}
+.notification h3{
+    float: right;
+    font-weight: bold;
+    margin: 20px;
+}

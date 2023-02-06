@@ -36,7 +36,7 @@ export default function CreatePost({token}) {
         </div>
 
         <textarea type="text" placeholder='type your post here' onChange={(e) => setCreatePost(e.target.value)}>{createPost}</textarea>
-        <button onClick={submitHandler}>submit post</button>
+        <button className='cc-btn' onClick={submitHandler}>submit post</button>
 
        
     </div>

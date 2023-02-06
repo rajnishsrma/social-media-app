@@ -27,6 +27,11 @@
 .search-results a {
     text-decoration: none;
     color: black;
+    
+}
+
+.addfriend{
+float: right;
 }
 .search-container{
     /* visibility: hidden; */

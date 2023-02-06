@@ -1,6 +1,6 @@
 import React from 'react';
 import './friends.css';
-import { FaUser } from 'react-icons/fa';
+import { FaUser, FaUserFriends } from 'react-icons/fa';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { addFriend } from '../../redux/action';
@@ -18,14 +18,14 @@ export default function Friends({friend, connected, token}) {
     }
 
   return (
-    <div className='friends-container'>
-        <div className="friend">
-            <h3>{friend.name}</h3>
-            <span><FaUser /></span>
-            {
-              !connected && <button onClick={addFriendHandler}>Add</button>
-            }
-        </div>
-    </div>
+    <div className=''>
+            
+            <div className="d-flex justify-content-around align-items-center"  >
+                          <h3>{friend.name}</h3>
+
+                              {
+              !connected ? <button style={{width : "100px"}} onClick={addFriendHandler}>Add</button> : <FaUserFriends />
+            }</div>
+                      </div>
   )
 }

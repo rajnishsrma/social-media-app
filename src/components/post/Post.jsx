@@ -14,7 +14,8 @@ function Post({post}){
 
                 <div className="post-txt-img">
                     <h2>{post.title}</h2>
-                    <p></p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, ullam.
+                    </p>
                
 
                 <div className="post-img">

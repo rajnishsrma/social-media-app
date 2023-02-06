@@ -1,7 +1,8 @@
-import { ADD_FRIEND, LOGIN, LOGOUT } from "./actionType";
+import { ADD_FRIEND, ALL_USERS, LOGIN, LOGOUT } from "./actionType";
 
 const initialState = {
     user: null,
+    all_users:[]
 }
 
 const reducer = (state = initialState, action) => {
@@ -28,6 +29,14 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 user : user
+            }
+        }
+
+        case ALL_USERS : {
+            let users = action.payload ;
+            return {
+                ...state,
+                all_users : users
             }
         }
 

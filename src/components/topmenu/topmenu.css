@@ -1,0 +1,9 @@
+a{
+    text-decoration: none;
+    padding: 10px 20px;
+    color: black;
+}
+
+a.active{
+    background-color: pink;
+}
